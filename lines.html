@@ -10,15 +10,11 @@
         }
 
         .container {
-            display: grid;
-            grid-template-areas:
-                "header header header header"
-                "sidebar main main main"
-                "footer footer footer footer";
-            grid-template-rows: 1fr 3fr 1fr;
-            grid-gap: 5px;
             height: 100vh;
-
+            display: grid;
+            grid-gap: 10px;
+            grid-template-columns: repeat(4, 1fr);
+            grid-auto-rows: 1fr;
         }
 
         .item {
@@ -26,23 +22,27 @@
         }
 
         .item-a {
-            grid-area: header;
+            grid-column: 1/3;
+            grid-row: 1/3;
             background-color: yellow;
-
         }
 
         .item-b {
-            grid-area: sidebar;
+            grid-column: 1/2;
+            grid-row: 3/5;
             background-color: limegreen;
+
         }
 
         .item-c {
-            grid-area: main;
+            grid-column: 3/5;
+            grid-row: 1/3;
             background-color: darkred;
         }
 
         .item-d {
-            grid-area: footer;
+            grid-column: 2/5;
+            grid-row: 3/5;
             background-color: lightblue;
         }
 
